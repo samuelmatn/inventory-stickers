@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Inventory stickers</title>
+	<link href="style.css" rel="stylesheet" />
+</head>
+<body>
+	{% for element in inventory %}
+	<div class="element">
+		<img class="code" src="codes/{{ element.code }}.svg" />
+		<div class="item">{{ element.item }}</div>
+		<div class="company">{{ element.company }}</div>
+	</div>
+	{% endfor %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+body {
+	font-size: 0;
+}
+
+.element {
+	width: 2.5cm;
+	height: 5cm;
+	border: 0.3mm solid black;
+	display: inline-table;
+	text-align: center;
+	font-size: 7pt;
+	margin-right: -0.3mm;
+	margin-bottom: -0.3mm;
+}
+
+.code {
+	width: 100%;
+}
+
+.item, .company {
+	margin: 0mm 2mm 0mm 2mm;
+}
+
+.company {
+	font-weight: bold;
+}
