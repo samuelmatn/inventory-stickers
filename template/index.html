@@ -7,11 +7,13 @@
 </head>
 <body>
 	{% for element in inventory %}
+	{% for _ in range(element.count) %}
 	<div class="element">
 		<img class="code" src="codes/{{ element.code }}.svg" />
 		<div class="item">{{ element.item }}</div>
 		<div class="company">{{ element.company }}</div>
 	</div>
+	{% endfor %}
 	{% endfor %}
 </body>
 </html>

@@ -4,7 +4,8 @@ import pyqrcode
 import jinja2
 
 class InventoryElement:
-	def __init__(self, code, item, company):
+	def __init__(self, count, code, item, company):
+		self.count = int(count)
 		self.code = code
 		self.item = item
 		self.company = company
@@ -13,8 +14,8 @@ def loadInventory():
 	with open('inventory.txt') as input:
 		lines = [line.rstrip() for line in input]
 	def getElement(offset):
-		return InventoryElement(*lines[offset:offset+3])
-	return [getElement(offset) for offset in range(0, len(lines), 4)]
+		return InventoryElement(*lines[offset:offset+4])
+	return [getElement(offset) for offset in range(0, len(lines), 5)]
 
 def generateCodes(inventory):
 	os.makedirs('output/codes')
